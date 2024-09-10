@@ -10,7 +10,7 @@ import InvoicePDF from './components/InvoicePDF';
 import axios from 'axios'; // Importar axios
 import Register from './components/Register';
 import Login from './components/Login';
-
+import ManageProducts from './components/ManageProducts';
 const initialProducts = [];
 
 
@@ -138,6 +138,7 @@ const App = () => {
         <Route path="/invoice-pdf" element={<InvoicePDF />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/manage-products" element={<PrivateRoute><ManageProducts /></PrivateRoute>} />
       </Routes>
 
       {showCartMenu && (
