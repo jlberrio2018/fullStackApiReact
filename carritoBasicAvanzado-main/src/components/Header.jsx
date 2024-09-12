@@ -7,7 +7,8 @@ const Header = ({ cartCount }) => {
     role: localStorage.getItem('role')
   });
   const navigate = useNavigate();
-
+  
+  // Cerrar sesion 
   const handleLogout = () => {
     ['username', 'token', 'role', 'userId'].forEach(item => localStorage.removeItem(item));
     setUser({ username: null, role: null });

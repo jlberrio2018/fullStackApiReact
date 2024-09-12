@@ -20,3 +20,6 @@ router.put('/pedidos/:idPedido', pedidosController.actualizarPedido);
 router.delete('/pedidos/:idPedido', pedidosController.eliminarPedido);
 
 module.exports = router;
+
+// Muestra todos los pedidos del cliente por su ID
+router.get('/pedidos/cliente/:idCliente', pedidosController.mostrarPedidosCliente);
